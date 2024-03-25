@@ -23,7 +23,6 @@ new Vue({
       this.modalVisible = true;
     },
     closeModal() {
-      console.log("Closing Modal");
       this.modalVisible = false;
     },
     applyChanges() {
@@ -46,7 +45,8 @@ new Vue({
             this.resetTimer();
             const audio = new Audio('static/audio/timeup.wav');
             audio.play();
-            this.updateSessionCounter();
+            this.sessionCounter++;
+            console.log(sessionCounter); // debug line
           }
         }, 1000);
       }
@@ -57,7 +57,6 @@ new Vue({
       this.timer = (this.mode==='pomodoro' ? this.pomodoroDuration : this.breakDuration);
       this.timerRunning = false;
       this.progressBarWidth = 100;
-      this.updateSessionCounter();
     },
     formatTime(time) {
       const minutes = Math.floor(time / 60);
@@ -78,13 +77,6 @@ new Vue({
       if (this.mode !== 'break') {
         this.mode = 'break';
         this.timer = this.breakDuration;
-      }
-    },
-    updateSessionCounter() {
-      if (this.timer === 0 && this.mode === 'pomodoro'){
-        this.sessionCounter++;
-      } else if (this.timer === 0 && this.mode === 'break'){
-        this.sessionCounter++;
       }
     },
     mounted(){
