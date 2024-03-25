@@ -20,7 +20,7 @@ new Vue({
         {url: 'static/images/japanese_cafe.jpeg', name: 'Japanese Cafe'},
         {url: 'static/images/purple_clouds_pixel.jpeg', name: 'Purple Clouds'}
       ],
-      selectedBackground: '',
+      selectedBackground: 'static/images/japanese_cafe.jpeg',
     };
   },
   methods: {
