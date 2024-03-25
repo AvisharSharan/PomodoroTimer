@@ -6,7 +6,7 @@ new Vue({
       breakDuration: 300,
       newPomodoroDuration: 25,
       newBreakDuration: 5,
-      modalVisible: false,
+      modalVisible: true,
       timer: 1500,
       timerRunning: false,
       timerInterval: null,
@@ -16,6 +16,11 @@ new Vue({
       showDuration: true,
       showTheme: false,
       settingsSection: 'duration',
+      backgroundPresets: [
+        {url: 'static/images/japanese_cafe.jpeg', name: 'Japanese Cafe'},
+        {url: 'static/images/purple_clouds_pixel.jpeg', name: 'Purple Clouds'}
+      ],
+      selectedBackground: '',
     };
   },
   methods: {
@@ -29,6 +34,7 @@ new Vue({
       this.timer = this.newPomodoroDuration * 60;
       this.pomodoroDuration = this.newPomodoroDuration * 60;
       this.breakDuration = this.newBreakDuration * 60;
+      this.applyBackgroundImage();
       this.resetTimer();
       this.closeModal();
     },
@@ -91,6 +97,9 @@ new Vue({
       this.settingsSection = 'theme';
       this.showDuration = false;
       this.showTheme = true;
-    }
+    },
+    applyBackgroundImage() {
+      document.body.style.backgroundImage = `url('${this.selectedBackground}')`
+    },
   }
 });

@@ -8,14 +8,14 @@ body{
   height: 100vh;
   font-family: 'Arial', sans-serif;
   background-color: #ffffff;
-  background-image: url('static/images/japanese\ night\ cafe\ vibes\ lofi.jpeg');
+  background-image: url('static/images/japanese_cafe.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
 }
 #app{
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
   background-size: cover;
 }
 .container{
@@ -254,6 +254,13 @@ body{
   border-radius: 5px;
 }
 
+#presetSelector{
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  font-weight: normal;
+  font-size: 1rem;
+}
 .modalFooter {
   display: flex;
   justify-content: flex-end;

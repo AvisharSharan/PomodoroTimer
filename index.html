@@ -62,7 +62,12 @@
                     </div>
 
                     <div v-if="showTheme">
-
+                      <div class="settingsTheme">
+                          <label for="presetSelector">Choose a theme</label>
+                          <select v-model="selectedBackground" @change="applyBackgroundImage" title="Background Presets" id="presetSelector" name="presetSelector">
+                            <option v-for="(preset, index) in backgroundPresets" :key="index" :value="preset.url">{{ preset.name }}</option>
+                          </select>
+                      </div>
                     </div>
                   </div>
                 </div>
