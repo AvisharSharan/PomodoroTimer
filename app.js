@@ -6,7 +6,7 @@ new Vue({
       breakDuration: 300,
       newPomodoroDuration: 25,
       newBreakDuration: 5,
-      modalVisible: true,
+      modalVisible: false,
       timer: 1500,
       timerRunning: false,
       timerInterval: null,
