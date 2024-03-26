@@ -53,11 +53,11 @@
                     <div v-if="showDuration">
                       <div class="settingsDuration">
                         <label for="pomodoroDuration">Pomodoro</label>
-                        <input type="number" id="pomodoroDuration" v-model="newPomodoroDuration">
+                        <input type="number" id="pomodoroDuration" v-model="newPomodoroDuration" min="1">
                       </div>
                       <div class="settingsDuration">
                         <label for="breakDuration">Break</label>
-                        <input type="number" id="breakDuration" v-model="newBreakDuration">
+                        <input type="number" id="breakDuration" v-model="newBreakDuration" min="1">
                       </div>
                     </div>
 
