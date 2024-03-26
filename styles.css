@@ -149,6 +149,10 @@ body{
   color: black;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+.modes #sessionCounter{
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
 
 .progress-bar-container {
   width: 500px;

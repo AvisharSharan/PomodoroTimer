@@ -19,9 +19,9 @@
           <div class="modes">
             <button @click="togglePomodoro" :class="{ 'active': mode === 'pomodoro' }" id="buttonPomodoro">Pomodoro</button>
             <button @click="toggleBreak" :class="{ 'active': mode === 'break' }" id="buttonBreak">Break</button>
+            <h3 id="sessionCounter">Session: {{ sessionCounter }}</h3>
           </div>
           <h1>{{ formatTime(timer) }}</h1>
-          <h3>Session: {{ sessionCounter }}</h3>
           <div class="progress-bar-container">
             <div class="progress-bar" :style="{ width: progressBarWidth + '%' }"></div>
           </div>
